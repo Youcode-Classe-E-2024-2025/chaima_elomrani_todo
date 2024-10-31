@@ -14,10 +14,9 @@ body{
     background-color: rgb(227, 241, 251);
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+   
     position: relative;
-    /* align-self: center; */
-    /* top: 180px; */
+    
 }
 
 .containerofall{
