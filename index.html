@@ -29,7 +29,7 @@
                 </div> -->
                
           </nav>
-          <button class="add-btn"> Add Task </button>
+          <button class="add-btn" id="addbtn"> Add Task </button>
        
           <!-- <div class="cards-container">
            
@@ -56,30 +56,58 @@
              </div> -->
             <div class="cards-container">
                 <div class="todo-card">
-                    <h3 class="todo">To Do </h3>
+                     <h3 class="todo">To Do </h3>
+                    
                     <div class="tache">
-                        <div class="line"></div>
+                      <div class="tache-icon">
+                         <div class="line"></div>
+                         <button id="btn" style="background-color:white; border: none; "><i class='bx bxs-trash' style="padding-right: 20px;"></i></button>
+                      </div>
                         <h4 class="title"> titre de la première tache</h4>
                     </div>
                      <div class="tache">
-                        <div class="line"></div>
+                        <div class="tache-icon">
+                            <div class="line"></div>
+                            <button style="background-color:white; border: none; "><i class='bx bxs-trash' style="padding-right: 20px;"></i></button>
+                         </div>
                         <h4 class="title"> titre de la première tache</h4>
                      </div>   
                 </div>
 
                 
             </div>
-
+             
+            
+            
 
          </div>
 
-
-
-
     </div>
-
-
-
+        <div class="form-container" id="form">
+        <form class="form" >
+            <div class="exit" id="exit"><i class='bx bxs-exit'></i></div>
+            <input type="text" placeholder="Title" id="title">
+            <input type="text" placeholder="Description" id="description">
+            <input type="date" id="date">
+            <div class="select">
+            <select name="typeOptions" id="priority" class="priority">
+                <option value="" disabled selected hidden >Priority</option> 
+                <option value="todo">ToDo</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+            </select>
+            <select name="typeOptions" id="statut" class="statut"> 
+                <option value="" disabled selected hidden >Statut</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+                <option value="P3">P3</option>
+            </select>
+            <button type="submit" id="submit">Submit</button>
+           </div>
+          </form>
+        </div>
+         
+<script src="main.js"></script>
 </body>
 
 </html>
