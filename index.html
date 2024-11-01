@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="./style.css" rel="stylesheet"> -->
-     <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+
     <title>TaskFlow</title>
 </head>
 
 <body>
     <div class="containerofall">
         <nav class="navbar">
-                <div class="logo">
-                    <img src="./images/logo.png" alt="logo TaskFlow">
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="Search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="filter-button">
-                    <button>filter</button>
-                </div>
-                <!-- <div class="profile-picture">
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo TaskFlow">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="filter-button">
+                <button>filter</button>
+            </div>
+            <!-- <div class="profile-picture">
                 </div> -->
-               
-          </nav>
-          <button class="add-btn" id="addbtn"> Add Task </button>
-       
-          <!-- <div class="cards-container">
+
+        </nav>
+        <button class="add-btn" id="addbtn"> Add Task </button>
+
+        <!-- <div class="cards-container">
            
              
                 <div class="card">
@@ -54,60 +54,106 @@
                 
                  
              </div> -->
-            <div class="cards-container">
-                <div class="todo-card">
-                     <h3 class="todo">To Do </h3>
-                    
-                    <div class="tache">
-                      <div class="tache-icon">
-                         <div class="line"></div>
-                         <button id="btn" style="background-color:white; border: none; "><i class='bx bxs-trash' style="padding-right: 20px;"></i></button>
-                      </div>
-                        <h4 class="title"> titre de la première tache</h4>
+        <div class="cards-container">
+
+<!-- ************************todo******************************************************* -->
+            <div class="todo-card">
+                <h3 class="todo">To Do </h3>
+                <div class="tache">
+                    <div class="tache-icon">
+                        <div class="line"></div>
+                        <button id="btn" style="background-color:white; border: none; "><i class='bx bxs-trash'
+                                style="padding-right: 20px;"></i></button>
                     </div>
-                     <div class="tache">
-                        <div class="tache-icon">
-                            <div class="line"></div>
-                            <button style="background-color:white; border: none; "><i class='bx bxs-trash' style="padding-right: 20px;"></i></button>
-                         </div>
-                        <h4 class="title"> titre de la première tache</h4>
-                     </div>   
+                    <h4 class="title"> titre de la première tache</h4>
                 </div>
-
-                
+                <div class="tache">
+                    <div class="tache-icon">
+                        <div class="line"></div>
+                        <button style="background-color:white; border: none; "><i class='bx bxs-trash'
+                                style="padding-right: 20px;"></i></button>
+                    </div>
+                    <h4 class="title"> titre de la première tache</h4>
+                </div>
             </div>
-             
-            
-            
+<!-- **************************************doing********************************************** -->
 
-         </div>
+            <div class="doing-card">
+                <h3 class="todo">Doing</h3>
+
+                <div class="tache">
+                    <div class="tache-icon">
+                        <div class="doing-line"></div>
+                        <button id="btn" style="background-color:white; border: none; "><i class='bx bxs-trash'
+                                style="padding-right: 20px;"></i></button>
+                    </div>
+                    <h4 class="title"> titre de la première tache</h4>
+                </div>
+                <div class="tache">
+                    <div class="tache-icon">
+                        <div class="doing-line"></div>
+                        <button style="background-color:white; border: none; "><i class='bx bxs-trash'
+                                style="padding-right: 20px;"></i></button>
+                    </div>
+                    <h4 class="title"> titre de la première tache</h4>
+                </div>
+            </div>
+            
+            <!-- <div class="todo-card">
+                <h3 class="todo">To Do </h3>
+
+                <div class="tache">
+                    <div class="tache-icon">
+                        <div class="line"></div>
+                        <button id="btn" style="background-color:white; border: none; "><i class='bx bxs-trash'
+                                style="padding-right: 20px;"></i></button>
+                    </div>
+                    <h4 class="title"> titre de la première tache</h4>
+                </div>
+                <div class="tache">
+                    <div class="tache-icon">
+                        <div class="line"></div>
+                        <button style="background-color:white; border: none; "><i class='bx bxs-trash'
+                                style="padding-right: 20px;"></i></button>
+                    </div>
+                    <h4 class="title"> titre de la première tache</h4>
+                </div>
+            </div>
+
+ -->
+        </div>
+
+
+
 
     </div>
-        <div class="form-container" id="form">
-        <form class="form" >
+
+    </div>
+    <div class="form-container" id="form">
+        <form class="form">
             <div class="exit" id="exit"><i class='bx bxs-exit'></i></div>
             <input type="text" placeholder="Title" id="title">
             <input type="text" placeholder="Description" id="description">
             <input type="date" id="date">
             <div class="select">
-            <select name="typeOptions" id="priority" class="priority">
-                <option value="" disabled selected hidden >Priority</option> 
-                <option value="todo">ToDo</option>
-                <option value="doing">Doing</option>
-                <option value="done">Done</option>
-            </select>
-            <select name="typeOptions" id="statut" class="statut"> 
-                <option value="" disabled selected hidden >Statut</option>
-                <option value="P1">P1</option>
-                <option value="P2">P2</option>
-                <option value="P3">P3</option>
-            </select>
-            <button type="submit" id="submit">Submit</button>
-           </div>
-          </form>
-        </div>
-         
-<script src="main.js"></script>
+                <select name="typeOptions" id="priority" class="priority">
+                    <option value="" disabled selected hidden>Priority</option>
+                    <option value="todo">ToDo</option>
+                    <option value="doing">Doing</option>
+                    <option value="done">Done</option>
+                </select>
+                <select name="typeOptions" id="statut" class="statut">
+                    <option value="" disabled selected hidden>Statut</option>
+                    <option value="P1">P1</option>
+                    <option value="P2">P2</option>
+                    <option value="P3">P3</option>
+                </select>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
