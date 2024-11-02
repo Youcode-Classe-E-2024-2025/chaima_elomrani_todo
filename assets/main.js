@@ -17,6 +17,7 @@ exit.addEventListener('click', function () {
 
 // ********************** Task Array *****************************
 const tacheArray = [];
+let taskCounter = 0;
 const submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener('click', function (e) {
@@ -37,6 +38,7 @@ submitBtn.addEventListener('click', function (e) {
     };
 
     tacheArray.push(newTask); 
+    taskCounter++;  
     form.reset();
     formContainer.style.display = "none"; 
 
@@ -65,20 +67,23 @@ function affichage() {
 
        
         const taskHTML = `
-            <div class="tache" data-index="${index}">
-                <div class="tache-icon">
-                   
-                    <div class = "buttons">
-                    <div class="line" style="background-color: ${lineColor};"></div>
-                    <button class="trash-btn" style="background-color:white; border: none;"><i class='bx bxs-trash' style="padding-right: 20px;"></i>
-                    </button>
-                    <div onclick="editTask(${index})" class="editbtn" id="editbtn"><i class='bx bxs-message-rounded-edit'></i></div>
-                    </div>
-                <h4 class="title">${task.title}</h4>
-               
+    <div class="tache" data-index="${index}" onclick="showTaskDetails(${index})">
+        <div class="tache-icon">
+            <div class="buttons">
+                <div class="line" style="background-color: ${lineColor};"></div>
+            <div class="edit-trash">
+                <button class="trash-btn" style="background-color:white; border: none;">
+                    <i class='bx bxs-trash' style="padding-right: 20px;"></i>
+                </button>
+                <div onclick="editTask(${index})" class="editbtn" id="editbtn">
+                    <i class='bx bxs-message-rounded-edit'></i>
+                </div>
+             </div>
             </div>
-        `;
-
+        </div>
+        <h4 class="title">${index + 1} - ${task.title}</h4>
+    </div>
+    `;
        
         if (task.statut === 'todo') {
             todoAdd.innerHTML += taskHTML;
@@ -139,4 +144,21 @@ function editTask(index){
    
 
 }
+
+// *************************************** details ****************************************************************
+function showTaskDetails(index) {
+    const task = tacheArray[index];
+
+    document.getElementById("task-title").textContent = task.title;
+    document.getElementById("task-description").textContent = task.description;
+
+    document.getElementById("task-details-modal").style.display = "flex";
+
+
+    document.getElementById("close-modal").addEventListener("click", function() {
+        document.getElementById("task-details-modal").style.display = "none";
+    });
+    
+}
+
 
