@@ -1,12 +1,14 @@
-// ********************** Form Controls *****************************
+// ********************** Form  *****************************
 const addbtn = document.getElementById("addbtn");
 const formContainer = document.getElementById("form-container");
 const form = document.getElementById("form");
 const exit = document.getElementById("exit");
 
+
 addbtn.addEventListener('click', function () {
     formContainer.style.display = "block";
 });
+
 
 exit.addEventListener('click', function () {
     formContainer.style.display = "none";
@@ -19,14 +21,12 @@ const submitBtn = document.getElementById("submit");
 submitBtn.addEventListener('click', function (e) {
     e.preventDefault();
 
-    
     const title = document.getElementById("title").value;
     const description = document.getElementById("description").value;
     const date = document.getElementById("date").value;
     const priority = document.getElementById("priority").value;
     const statut = document.getElementById("statut").value;
 
-   
     const newTask = {
         title: title,
         description: description,
@@ -39,26 +39,20 @@ submitBtn.addEventListener('click', function (e) {
     form.reset();
     formContainer.style.display = "none"; 
 
-    affichage(tacheArray); 
-});
-
+    affichage(); 
+})
 // ********************** Display Function *****************************
-function affichage(tacheArray) {
-    
+
+function affichage() {
     const todoAdd = document.querySelector('.todoAdd');
     const doingAdd = document.querySelector('.doingAdd');
     const doneAdd = document.querySelector('.doneAdd');
 
-    
-    todoAdd.innerHTML = '';
+        todoAdd.innerHTML = '';
     doingAdd.innerHTML = '';
     doneAdd.innerHTML = '';
 
-   
-    for (let i = 0; i < tacheArray.length; i++) {
-        const task = tacheArray[i];
-
-       
+       tacheArray.forEach((task, index) => {
         let lineColor;
         if (task.priority === 'P1') {
             lineColor = 'red';
@@ -70,10 +64,10 @@ function affichage(tacheArray) {
 
        
         const taskHTML = `
-            <div class="tache">
+            <div class="tache" data-index="${index}">
                 <div class="tache-icon">
                     <div class="line" style="background-color: ${lineColor};"></div>
-                    <button id="btn" style="background-color:white; border: none;">
+                    <button class="trash-btn" style="background-color:white; border: none;">
                         <i class='bx bxs-trash' style="padding-right: 20px;"></i>
                     </button>
                 </div>
@@ -81,7 +75,7 @@ function affichage(tacheArray) {
             </div>
         `;
 
-      
+       
         if (task.statut === 'todo') {
             todoAdd.innerHTML += taskHTML;
         } else if (task.statut === 'doing') {
@@ -89,5 +83,23 @@ function affichage(tacheArray) {
         } else if (task.statut === 'done') {
             doneAdd.innerHTML += taskHTML;
         }
-    }
+    });
+
+   
+    document.querySelectorAll('.trash-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const taskElement = this.closest('.tache');
+            const index = taskElement.getAttribute('data-index');
+            deleteTask(index);
+        });
+    });
+}
+
+// ********************************* Delete Function ********************************
+function deleteTask(index) {
+
+    tacheArray.splice(index, 1);
+    
+
+    affichage();
 }

@@ -139,32 +139,12 @@ body{
     border-radius:15px ;
     padding: 16px 40px  ;
    width: 100%;
-   margin-bottom: 20px;
    background-color:rgb(7, 101, 159);
-   /* display: flex;
-   flex-direction: column; */
-   /* gap: 20px ; */
    grid-column-start:1;
    grid-column-end:2;
-   /* padding-bottom: 70px; */
-   
+ 
 }
 
-
-    /* .card-tache{
-        background-color: rgba(215, 212, 212, 0.836);
-        padding-left: 100px;
-        border-radius: 15px;
-        padding-right: 100px ;
-        margin-top: 20px ;
-        /* padding-top: 100%; */
-        /* top: 20px; */
-        /* padding-bottom: 200% ;
-        box-shadow: 0 0 10px rgba(0, 0,0, 0.4);
-
-
-
-    }  */
 
 .doing-card{
     height: auto;
@@ -180,23 +160,14 @@ body{
    padding-bottom: 50px;
 }
 
-/* .doing-line{
-    top: 0;
-    width: 200px;
-    height:10px ;
-    background-color: rgb(243, 123, 3);
-    border-radius: 30px;
-    margin-bottom: 10px;
-} */
+
 
 .todo{
     font-size: 30px;
 }
 
 .tache{
-    /* border: 3px solid rgb(1, 20, 76); */
     box-shadow: 0 0 10px rgba(0, 0,0, 0.4);
-    /* padding: 50px ; */
     padding-left: 10px;
     padding-bottom: 50px;
     padding-top: 10px;
@@ -204,7 +175,7 @@ body{
     background-color: white;
     margin-bottom: 20px;
     
-    /* display: flex; */
+   
 }
 
 .done-card{
@@ -212,26 +183,13 @@ body{
     border-radius:15px ;
     padding: 16px 40px ;
     padding-bottom: 50px;
-    
-   width: 100%;
-   background-color:rgb(7, 101, 159);
-   display: flex;
-   flex-direction: column;
-   /* gap: px ; */
-   grid-column-start:3;
-   grid-column-end:4;
+    width: 100%;
+    background-color:rgb(7, 101, 159);
+    display: flex;
+    flex-direction: column;
+    grid-column-start:3;
+    grid-column-end:4;
 } 
-
-/* .done-line{
-    top: 0;
-    width: 200px;
-    height:10px ;
-    background-color: rgb(2, 177, 17);
-    border-radius: 30px;
-    margin-bottom: 10px;
-} */
-
-
 
 
 .tache-icon{
@@ -254,17 +212,17 @@ body{
     background-color: red;
     border-radius: 30px;
     margin-bottom: 10px;
-    /* border: 2px solid black; */
+
 }
 
 .form{
-
+   border-radius: 20px ;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   background-color: rgb(165, 203, 227);
+   background-color:rgb(216, 226, 231);
    width: 500px;
-   height: 400px;
+   height: 450px;
    border: 2px solid black;
    gap: 10px;
   
@@ -279,11 +237,10 @@ body{
 
 
 #title{
+    border-radius: 20px;
     padding: 20px;
     background-color:white;
     border: 2px solid rgba(1, 48, 80, 0.937);
-    /* grid-column-start: 1;
-    grid-column-end: 3; */
     margin: 20px;
 
 }
@@ -292,68 +249,74 @@ body{
     padding: 40px;
     background-color: white;
     border: 2px solid rgba(1, 48, 80, 0.937);
-    /* grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4; */
+    border-radius: 20px;
     margin-bottom: 20px;
     margin: 20px;
 }
 
 #date{
-    padding: 5px;
+    padding: 8px;
     background-color: white;
     border: 2px solid rgba(1, 48, 80, 0.937);
-    /* grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5; */
-    /* margin-left: 90px; */
-    /* margin-bottom: 20px; */
-    width: 60%;
+    width: 40%;
     align-self: center;
-    /* left: 20px; */
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
-
 
 
 .select{
     display: flex;
     justify-content: space-around;
-    /* bottom: 20px; */
     margin-bottom:15px;
+    
 }
+
+
 .exit{
     display: flex;
     justify-content: end;
 }
+
+
 .exit i{
     font-size: 40px;
     padding-right: 10px;
     color: rgb(255, 255, 255);
 }
+
 .exit i:hover{
     color: rgb(246, 38, 38);
 }
 
 .statut{
-    background-color: rgb(241, 209, 235);
+    background-color: rgb(148, 148, 155);
     padding: 10px;
     border: 2px solid rgb(59, 2, 48);
     border-radius: 15px;
+}
+
+.statut:hover{
+    background-color: rgb(208, 208, 210);
 }
 
 .priority{
-    background-color: rgb(241, 209, 235);
+    background-color: rgb(148, 148, 155);
     padding: 10px;
     border: 2px solid rgb(59, 2, 48);
     border-radius: 15px;
 }
+#priority{
+    background-color: rgb(208, 208, 210);
+}
 
 #submit{
-    background-color: rgb(241, 209, 235);
+    background-color:  rgb(178, 178, 178);
     padding: 10px;
-    border: 2px solid rgb(59, 2, 48);
+    /* border: 2px solid rgb(59, 2, 48); */
     border-radius: 15px;
     
+}
+#submit:hover{
+    background-color: red;
 }
