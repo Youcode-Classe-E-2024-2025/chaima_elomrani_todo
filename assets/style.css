@@ -111,7 +111,7 @@ body{
     align-items:center;
     grid-column-start: 4;
     grid-column-end: 5;
-    margin-left: 40%;
+    margin-left: 35%;
     border-radius: 30px;
 
 
@@ -121,7 +121,7 @@ body{
 }
 
 .cards-container{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: 20px;
     display: grid;
     justify-content: space-evenly;
@@ -139,7 +139,7 @@ body{
     border-radius:15px ;
     padding: 16px 40px  ;
    width: 100%;
-   background-color:rgb(7, 101, 159);
+   background-color:rgba(86, 104, 115, 0.244);
    grid-column-start:1;
    grid-column-end:2;
  
@@ -151,7 +151,7 @@ body{
     border-radius:15px ;
     padding: 16px 40px;
    width: 100%;
-   background-color:rgb(7, 101, 159);
+   background-color:rgba(86, 104, 115, 0.244);
    display: flex;
    flex-direction: column;
    gap: 20px ;
@@ -184,7 +184,7 @@ body{
     padding: 16px 40px ;
     padding-bottom: 50px;
     width: 100%;
-    background-color:rgb(7, 101, 159);
+    background-color:rgba(86, 104, 115, 0.244);
     display: flex;
     flex-direction: column;
     grid-column-start:3;
@@ -194,6 +194,7 @@ body{
 
 .tache-icon{
   display: flex;
+  flex-direction: column;
   justify-content :space-between;
 }
 #btn:hover{
@@ -319,4 +320,16 @@ body{
 }
 #submit:hover{
     background-color: red;
+}
+
+.buttons{
+    display: flex;
+}
+
+.form-edit{
+   
+    display: none;
+    position: absolute;
+    z-index: 999;
+    align-self: center;
 }

@@ -66,12 +66,15 @@ function affichage() {
         const taskHTML = `
             <div class="tache" data-index="${index}">
                 <div class="tache-icon">
+                   
+                    <div class = "buttons">
                     <div class="line" style="background-color: ${lineColor};"></div>
-                    <button class="trash-btn" style="background-color:white; border: none;">
-                        <i class='bx bxs-trash' style="padding-right: 20px;"></i>
+                    <button class="trash-btn" style="background-color:white; border: none;"><i class='bx bxs-trash' style="padding-right: 20px;"></i>
                     </button>
-                </div>
+                    <div onclick="editTask(${index})" class="editbtn" id="editbtn"><i class='bx bxs-message-rounded-edit'></i></div>
+                    </div>
                 <h4 class="title">${task.title}</h4>
+               
             </div>
         `;
 
@@ -91,6 +94,7 @@ function affichage() {
             const taskElement = this.closest('.tache');
             const index = taskElement.getAttribute('data-index');
             deleteTask(index);
+            modifier (index);
         });
     });
 }
@@ -103,3 +107,33 @@ function deleteTask(index) {
 
     affichage();
 }
+function editTask(index){
+    const formEdit=document.querySelector('.form-edit');
+    formEdit.style.display="block";
+    document.getElementById("title-edit").value = tacheArray[index].title
+    document.getElementById("description-edit").value = tacheArray[index].description   
+     document.getElementById("date-edit").value = tacheArray[index].date
+    document.getElementById("priority-edit").value = tacheArray[index].priority
+    document.getElementById("statut-edit").value = tacheArray[index].statut
+    document.getElementById("form-edit").addEventListener("submit", function(e){
+        e.preventDefault();
+        tacheArray[index] = {
+            title:document.getElementById("title-edit").value,
+            description:document.getElementById("description-edit").value,
+            date:document.getElementById("date-edit").value,
+            statut:document.getElementById("statut-edit").value,
+            priority:document.getElementById("priority-edit").value 
+        }
+        console.log( tacheArray[index])
+        affichage();
+        const formEdit=document.querySelector('.form-edit');
+        formEdit.style.display="none";
+
+
+    })
+
+
+   
+
+}
+
