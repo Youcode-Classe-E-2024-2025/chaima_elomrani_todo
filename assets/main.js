@@ -3,6 +3,7 @@ const addbtn = document.getElementById("addbtn");
 const formContainer = document.getElementById("form-container");
 const form = document.getElementById("form");
 const exit = document.getElementById("exit");
+const exitedit = document.getElementById("exit-edit");
 
 
 addbtn.addEventListener('click', function () {
@@ -132,7 +133,9 @@ function editTask(index){
 
     })
 
-
+    exitedit.addEventListener('click', function () {
+        formContainer.style.display = "none";
+    });
    
 
 }

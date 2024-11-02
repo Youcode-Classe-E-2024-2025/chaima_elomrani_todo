@@ -333,3 +333,47 @@ body{
     z-index: 999;
     align-self: center;
 }
+
+#title-edit{
+    border-radius: 20px;
+    padding: 20px;
+    background-color:white;
+    border: 2px solid rgba(1, 48, 80, 0.937);
+    margin: 20px;
+
+}
+
+#description-edit{
+    padding: 40px;
+    background-color: white;
+    border: 2px solid rgba(1, 48, 80, 0.937);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+#date-edit{
+    padding: 8px;
+    background-color: white;
+    border: 2px solid rgba(1, 48, 80, 0.937);
+    width: 40%;
+    align-self: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.exit-edit{
+    display: flex;
+    justify-content: end;
+}
+
+
+.exit-edit i{
+    font-size: 40px;
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.exit-edit i:hover{
+    color: rgb(246, 38, 38);
+}
