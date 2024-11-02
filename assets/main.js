@@ -13,7 +13,10 @@ addbtn.addEventListener('click', function () {
 
 exit.addEventListener('click', function () {
     formContainer.style.display = "none";
+    TaskDetails.style.display="none";
+    
 });
+
 
 // ********************** Task Array *****************************
 const tacheArray = [];
@@ -134,19 +137,21 @@ function editTask(index){
         affichage();
         const formEdit=document.querySelector('.form-edit');
         formEdit.style.display="none";
+         
 
+      
 
     })
 
-    exitedit.addEventListener('click', function () {
-        formContainer.style.display = "none";
-    });
    
+    exitedit.addEventListener('click', function () {
+        formEdit.style.display = "none";
+    });
 
 }
 
 // *************************************** details ****************************************************************
-function showTaskDetails(index) {
+function TaskDetails(index) {
     const task = tacheArray[index];
 
     document.getElementById("task-title").textContent = task.title;
@@ -155,10 +160,13 @@ function showTaskDetails(index) {
     document.getElementById("task-details-modal").style.display = "flex";
 
 
-    document.getElementById("close-modal").addEventListener("click", function() {
-        document.getElementById("task-details-modal").style.display = "none";
+    document.getElementById("close").addEventListener("click", function() {
+
+    document.getElementById("task-details-modal").style.display = "none";
+
     });
     
+
 }
 
 
